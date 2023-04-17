@@ -2,7 +2,7 @@
 ----------------------
 Contact: Pengyu Wang (pengyu_wang@nudt.edu.cn)
 
-NDIRECT is a library for direct convolution on ARMv8-based processors. It preserves the conventional `NCHW` data format, which is compatible with mainstream deep learning frameworks, such as Pytorch and MXNet. 
+NDIRECT is a library for direct convolution on ARMv8-based processors, with a focus on providing high performance, high data reusability, and DL framework compatibility. It preserves the conventional `NCHW` data format, which is compatible with mainstream deep learning frameworks, such as Pytorch and MXNet. 
 
 This work continues to be optimized.
 ### Software Dependences
@@ -16,14 +16,14 @@ Phyitum 2000+, Kunpeng 920, ThunderX2, Raspberry Pi 4 Model B or other ARMv8-bas
 
 ### Compile and Install
 ----------------------
-```cpp
+```bash
 $ cd direct_cnn/
 $ make
 $ make install PREFIX= specify the installation path
 ```
 ### Compile with NDIRECT
 ----------------------
-```cpp
+```cs
 #include <stdio.h>
 #include <stdlib.h>
 #include "NDIRECT_direct.h"
@@ -31,7 +31,7 @@ $ make install PREFIX= specify the installation path
 ### API
 ----------------------
 We illustrate the convolution interface of NDIRECT.
-```cpp
+```cs
 NDIRECT_dnn_conv_fwd_exec(int H, int W, int N, int C, float *input,
                                  int K, int R, int S, float *filter,
                                  int padh, int padw, int stride, float* output);
@@ -39,7 +39,7 @@ NDIRECT_dnn_conv_fwd_exec(int H, int W, int N, int C, float *input,
 ### Running Benchmark
 ----------------------
 To run the command
-```cpp
+```bash
 $ cd direct_cnn/test
 $ make
 $ ./run.sh
