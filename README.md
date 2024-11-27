@@ -134,3 +134,5 @@ clean:
 ### Note
 ----------------------
 NDIRECT adopts the traditional `NCHW` and `KCRS` data formats to store input and filter tensors. Therefore, you can integrate NDIRECT with DL frameworks for CNNs training and inference directly.
+## License
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
